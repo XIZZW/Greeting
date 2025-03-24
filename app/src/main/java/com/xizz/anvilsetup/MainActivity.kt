@@ -3,45 +3,30 @@ package com.xizz.anvilsetup
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
+import androidx.activity.viewModels
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.lifecycle.ViewModelProvider
 import com.xizz.anvilsetup.ui.theme.AnvilSetupTheme
+import javax.inject.Inject
 
 class MainActivity : ComponentActivity() {
+    @Inject lateinit var viewModelFactory: ViewModelProvider.Factory
+    private val viewModel: GreetingViewModel by viewModels { viewModelFactory }
+
     override fun onCreate(savedInstanceState: Bundle?) {
+        (application as MainApplication).appComponent.inject(this)
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         setContent {
             AnvilSetupTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+                Greeting(viewModel)
             }
         }
     }
 }
 
 @Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
+fun Greeting(viewModel: GreetingViewModel) {
+    Text(text = "Hello ${viewModel.getName()}!")
 }
 
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    AnvilSetupTheme {
-        Greeting("Android")
-    }
-}

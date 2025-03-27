@@ -2,6 +2,7 @@ package com.xizz.greeting
 
 import androidx.lifecycle.ViewModel
 import com.squareup.anvil.annotations.ContributesMultibinding
+import com.xizz.core.DependencyProvider
 import com.xizz.core.UserScope
 import com.xizz.core.ViewModelKey
 import javax.inject.Inject
@@ -9,7 +10,7 @@ import javax.inject.Inject
 @ContributesMultibinding(UserScope::class, boundType = ViewModel::class)
 @ViewModelKey(UserViewModel::class)
 class UserViewModel @Inject constructor(
-    private val application: MainApplication,
+    private val dependencyProvider: DependencyProvider,
     private val userRepository: UserRepository
 ) : ViewModel() {
     fun getUserName(userId: String) = userRepository.getUserName(userId)

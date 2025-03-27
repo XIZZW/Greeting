@@ -3,6 +3,7 @@ package com.xizz.greeting
 import androidx.lifecycle.ViewModel
 import com.squareup.anvil.annotations.ContributesMultibinding
 import com.xizz.core.AppScope
+import com.xizz.core.ViewModelKey
 import com.xizz.pub.GreetingRepository
 import java.util.UUID
 import javax.inject.Inject

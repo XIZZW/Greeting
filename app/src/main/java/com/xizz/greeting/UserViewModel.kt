@@ -3,6 +3,7 @@ package com.xizz.greeting
 import androidx.lifecycle.ViewModel
 import com.squareup.anvil.annotations.ContributesMultibinding
 import com.xizz.core.UserScope
+import com.xizz.core.ViewModelKey
 import javax.inject.Inject
 
 @ContributesMultibinding(UserScope::class, boundType = ViewModel::class)

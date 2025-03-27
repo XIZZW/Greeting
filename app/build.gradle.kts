@@ -42,6 +42,7 @@ dependencies {
     implementation(project(":core"))
     implementation(project(":data:greeting:pub"))
     implementation(project(":data:greeting:impl"))
+    implementation(project(":feature:greeting"))
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)

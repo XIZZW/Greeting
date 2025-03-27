@@ -9,7 +9,9 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 @Composable
 fun UserScreen(
     userId: String,
-    viewModel: GreetingViewModel = viewModel(factory = LocalContext.current.appComponent.viewModelFactory()),
+    viewModel: UserViewModel = viewModel(factory = LocalContext.current.viewModelFactory),
 ) {
-    Text(text = "Your User ID is $userId")
+    Text(text = "Your User ID is $userId and Your Name is ${viewModel.getUserName(userId)}!")
+//    Text(text = "Your User ID is $userId!")
 }
+

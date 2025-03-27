@@ -3,11 +3,11 @@ package com.xizz.greeting
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.squareup.anvil.annotations.ContributesBinding
+import com.squareup.anvil.annotations.ContributesMultibinding
 import javax.inject.Inject
 import javax.inject.Provider
 
-@ContributesBinding(AppScope::class)
-class ViewModelFactory @Inject constructor(
+open class ViewModelFactory @Inject constructor(
     private val creators: @JvmSuppressWildcards Map<Class<out ViewModel>, Provider<ViewModel>>
 ) : ViewModelProvider.Factory {
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
@@ -19,3 +19,13 @@ class ViewModelFactory @Inject constructor(
         return creator.get() as T
     }
 }
+
+@ContributesMultibinding(AppScope::class)
+class AppViewModelFactory @Inject constructor(
+    creators: @JvmSuppressWildcards Map<Class<out ViewModel>, Provider<ViewModel>>
+) : ViewModelFactory(creators)
+
+@ContributesMultibinding(UserScope::class)
+class UserViewModelFactory @Inject constructor(
+    creators: @JvmSuppressWildcards Map<Class<out ViewModel>, Provider<ViewModel>>
+) : ViewModelFactory(creators)

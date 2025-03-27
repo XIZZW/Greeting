@@ -1,12 +1,14 @@
 package com.xizz.greeting
 
-import com.squareup.anvil.annotations.ContributesSubcomponent
+import com.squareup.anvil.annotations.MergeSubcomponent
 import dagger.BindsInstance
+import dagger.Subcomponent
 
-@ContributesSubcomponent(parentScope = AppScope::class, scope = UserScope::class)
+@MergeSubcomponent(UserScope::class)
 interface UserComponent {
+    fun viewModelFactory(): UserViewModelFactory
 
-    @ContributesSubcomponent.Factory
+    @Subcomponent.Factory
     interface Factory {
         fun create(@BindsInstance userId: String): UserComponent
     }

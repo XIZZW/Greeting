@@ -2,11 +2,10 @@ package com.xizz.greeting
 
 import android.app.Application
 import android.content.Context
-import javax.inject.Inject
 
 
-class MainApplication @Inject constructor(): Application() {
-    val appComponent: AppComponent by lazy { DaggerAppComponent.create() }
+class MainApplication() : Application() {
+    val appComponent: AppComponent by lazy { DaggerAppComponent.factory().create(this) }
 
 
     var userComponent: UserComponent? = null
@@ -20,4 +19,9 @@ class MainApplication @Inject constructor(): Application() {
     }
 }
 
-val Context.appComponent: AppComponent get() = (applicationContext as MainApplication).appComponent
+val Context.appComponent: AppComponent
+    get() = (applicationContext as MainApplication).appComponent
+val Context.userComponent: UserComponent?
+    get() = (applicationContext as MainApplication).userComponent
+val Context.viewModelFactory: ViewModelFactory
+    get() = userComponent?.viewModelFactory() ?: appComponent.viewModelFactory()

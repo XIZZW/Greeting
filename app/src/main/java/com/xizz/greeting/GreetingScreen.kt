@@ -14,7 +14,7 @@ fun GreetingScreen(
     viewModel: GreetingViewModel = viewModel(factory = LocalContext.current.appComponent.viewModelFactory()),
 ) {
     Column {
-        Text(text = "Hello ${viewModel.getName()}!")
+        Text(text = viewModel.getGreeting())
         Button(
             onClick = {
                 val userId = viewModel.createUserSession()

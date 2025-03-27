@@ -11,7 +11,7 @@ class GreetingViewModel @Inject constructor(
     private val application: MainApplication,
     private val greetingRepository: GreetingRepository
 ) : ViewModel() {
-    fun getName() = greetingRepository.getName()
+    fun getGreeting() = greetingRepository.getGreeting()
 
     fun createUserSession(): String {
         val userId = UUID.randomUUID().toString()

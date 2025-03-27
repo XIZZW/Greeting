@@ -34,5 +34,6 @@ dependencies {
     implementation(project(":core"))
     implementation(project(":data:greeting:pub"))
     implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.dagger)
 }

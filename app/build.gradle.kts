@@ -44,6 +44,7 @@ dependencies {
     implementation(project(":data:greeting:impl"))
     implementation(project(":feature:greeting"))
     implementation(project(":data:user:pub"))
+    implementation(project(":data:user:impl"))
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)

@@ -1,4 +1,4 @@
-package com.xizz.greeting
+package com.xizz.pub
 
 interface GreetingRepository {
     fun getGreeting(): String

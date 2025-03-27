@@ -5,6 +5,7 @@ import com.squareup.anvil.annotations.ContributesMultibinding
 import com.xizz.core.DependencyProvider
 import com.xizz.core.UserScope
 import com.xizz.core.ViewModelKey
+import com.xizz.pub.UserRepository
 import javax.inject.Inject
 
 @ContributesMultibinding(UserScope::class, boundType = ViewModel::class)

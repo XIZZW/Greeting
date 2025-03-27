@@ -1,4 +1,4 @@
-package com.xizz.anvilsetup
+package com.xizz.greeting
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

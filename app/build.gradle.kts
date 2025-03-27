@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace = "com.xizz.anvilsetup"
+    namespace = "com.xizz.greeting"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.xizz.anvilsetup"
+        applicationId = "com.xizz.greeting"
         minSdk = 28
         targetSdk = 35
         versionCode = 1
@@ -48,6 +48,7 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
     implementation(libs.dagger)
     kapt(libs.dagger.compiler)
 

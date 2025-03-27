@@ -9,13 +9,14 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
+import com.xizz.core.viewModelFactory
 import com.xizz.greeting.ui.theme.GreetingTheme
 
 @Composable
 fun GreetingScreen(
     modifier: Modifier = Modifier,
     navController: NavHostController,
-    viewModel: GreetingViewModel = viewModel(factory = LocalContext.current.appComponent.viewModelFactory()),
+    viewModel: GreetingViewModel = viewModel(factory = LocalContext.current.viewModelFactory),
 ) {
     Greeting(
         modifier = modifier,

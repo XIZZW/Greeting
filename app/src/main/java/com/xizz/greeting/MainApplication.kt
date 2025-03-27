@@ -1,7 +1,6 @@
 package com.xizz.greeting
 
 import android.app.Application
-import android.content.Context
 import com.xizz.core.DependencyProvider
 import com.xizz.core.ViewModelFactory
 
@@ -21,10 +20,3 @@ class MainApplication() : Application(), DependencyProvider {
         userComponent = null
     }
 }
-
-val Context.appComponent: AppComponent
-    get() = (applicationContext as MainApplication).appComponent
-val Context.userComponent: UserComponent?
-    get() = (applicationContext as MainApplication).userComponent
-val Context.viewModelFactory: ViewModelFactory
-    get() = userComponent?.viewModelFactory() ?: appComponent.viewModelFactory()

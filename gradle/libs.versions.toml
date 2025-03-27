@@ -38,4 +38,5 @@ kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 anvil = { id = "com.squareup.anvil", version.ref = "anvil" }
+android-library = { id = "com.android.library", version.ref = "agp" }
 

@@ -7,7 +7,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
-import java.util.UUID
 
 @Composable
 fun GreetingScreen(
@@ -16,7 +15,12 @@ fun GreetingScreen(
 ) {
     Column {
         Text(text = "Hello ${viewModel.getName()}!")
-        Button(onClick = { navController.navigate("user/${UUID.randomUUID()}") }) {
+        Button(
+            onClick = {
+                val userId = viewModel.createUserSession()
+                navController.navigate("user/${userId}")
+            },
+        ) {
             Text(text = "Go to User Screen")
         }
     }

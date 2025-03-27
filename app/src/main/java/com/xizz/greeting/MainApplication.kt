@@ -2,8 +2,10 @@ package com.xizz.greeting
 
 import android.app.Application
 import android.content.Context
+import javax.inject.Inject
 
-class MainApplication : Application() {
+
+class MainApplication @Inject constructor(): Application() {
     val appComponent: AppComponent by lazy { DaggerAppComponent.create() }
 
 

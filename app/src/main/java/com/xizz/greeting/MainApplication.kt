@@ -1,4 +1,4 @@
-package com.xizz.anvilsetup
+package com.xizz.greeting
 
 import android.app.Application
 import android.content.Context

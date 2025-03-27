@@ -1,4 +1,4 @@
-package com.xizz.anvilsetup
+package com.xizz.greeting
 
 import com.squareup.anvil.annotations.ContributesBinding
 import javax.inject.Inject

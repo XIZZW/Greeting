@@ -1,4 +1,4 @@
-package com.xizz.anvilsetup.ui.theme
+package com.xizz.greeting.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

@@ -1,4 +1,4 @@
-package com.xizz.anvilsetup
+package com.xizz.greeting
 
 interface GreetingRepository {
     fun getName(): String

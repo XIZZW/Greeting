@@ -7,11 +7,11 @@ plugins {
 }
 
 android {
-    namespace = "com.xizz.anvilsetup"
+    namespace = "com.xizz.greeting"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.xizz.anvilsetup"
+        applicationId = "com.xizz.greeting"
         minSdk = 28
         targetSdk = 35
         versionCode = 1

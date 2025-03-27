@@ -1,4 +1,4 @@
-package com.xizz.anvilsetup
+package com.xizz.greeting
 
 import androidx.lifecycle.ViewModel
 import com.squareup.anvil.annotations.ContributesMultibinding

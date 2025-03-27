@@ -3,10 +3,6 @@ package com.xizz.greeting
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.platform.LocalContext
-import androidx.lifecycle.viewmodel.compose.viewModel
 import com.xizz.greeting.ui.theme.AnvilSetupTheme
 
 class MainActivity : ComponentActivity() {
@@ -14,15 +10,8 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             AnvilSetupTheme {
-                Greeting()
+                AppNavHost()
             }
         }
     }
-}
-
-@Composable
-fun Greeting(
-    viewModel: GreetingViewModel = viewModel(factory = LocalContext.current.appComponent.viewModelFactory())
-) {
-    Text(text = "Hello ${viewModel.getName()}!")
 }

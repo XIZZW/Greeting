@@ -1,7 +1,7 @@
 package com.xizz.greeting
 
 import com.squareup.anvil.annotations.ContributesBinding
-import com.xizz.core.di.AppScope
+import com.xizz.core.AppScope
 import javax.inject.Inject
 
 @ContributesBinding(AppScope::class)

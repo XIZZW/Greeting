@@ -1,8 +1,8 @@
 package com.xizz.greeting
 
 import com.squareup.anvil.annotations.MergeComponent
-import com.xizz.core.di.AppScope
-import com.xizz.core.di.AppViewModelFactory
+import com.xizz.core.AppScope
+import com.xizz.core.AppViewModelFactory
 import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Singleton

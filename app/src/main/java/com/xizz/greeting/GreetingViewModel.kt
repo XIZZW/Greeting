@@ -2,7 +2,7 @@ package com.xizz.greeting
 
 import androidx.lifecycle.ViewModel
 import com.squareup.anvil.annotations.ContributesMultibinding
-import com.xizz.core.di.AppScope
+import com.xizz.core.AppScope
 import java.util.UUID
 import javax.inject.Inject
 

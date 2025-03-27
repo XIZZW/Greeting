@@ -1,4 +1,4 @@
-package com.xizz.core.di
+package com.xizz.core
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider

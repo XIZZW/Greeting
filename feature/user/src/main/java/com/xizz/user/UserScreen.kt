@@ -1,4 +1,4 @@
-package com.xizz.greeting
+package com.xizz.user
 
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable

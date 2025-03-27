@@ -1,4 +1,4 @@
-package com.xizz.greeting
+package com.xizz.user
 
 import androidx.lifecycle.ViewModel
 import com.squareup.anvil.annotations.ContributesMultibinding

@@ -6,4 +6,5 @@ import com.squareup.anvil.annotations.MergeComponent
 interface AppComponent {
     fun inject(activity: MainActivity)
     fun viewModelFactory(): ViewModelFactory
+    fun userComponentFactory(): UserComponent.Factory
 }

@@ -6,7 +6,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
-import com.xizz.greeting.ui.theme.AnvilSetupTheme
+import com.xizz.greeting.ui.theme.GreetingTheme
 
 
 @Composable
@@ -37,7 +37,7 @@ private fun User(
 @Preview(showBackground = true)
 @Composable
 private fun UserPreview() {
-    AnvilSetupTheme {
+    GreetingTheme {
         User(
             modifier = Modifier,
             userId = "123456",

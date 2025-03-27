@@ -9,7 +9,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavHostController
-import com.xizz.greeting.ui.theme.AnvilSetupTheme
+import com.xizz.greeting.ui.theme.GreetingTheme
 
 @Composable
 fun GreetingScreen(
@@ -45,7 +45,7 @@ private fun Greeting(
 @Preview(showBackground = true)
 @Composable
 private fun GreetingPreview() {
-    AnvilSetupTheme {
+    GreetingTheme {
         Greeting(
             modifier = Modifier,
             greeting = "Hello Android!",

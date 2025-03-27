@@ -1,2 +1,2 @@
-# AnvilSetup
-A template for setting up Anvil for dependency injection.
+# Greeting
+A toy project to demonstrate Compose Navigation, Anvil Dependency Injection

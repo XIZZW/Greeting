@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.anvil)
 }
 
 android {
@@ -32,6 +33,8 @@ android {
 dependencies {
 
     implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.compose)
+    implementation(libs.dagger)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

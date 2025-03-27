@@ -2,6 +2,7 @@ package com.xizz.greeting
 
 import android.app.Application
 import android.content.Context
+import com.xizz.core.di.ViewModelFactory
 
 
 class MainApplication() : Application() {

@@ -2,6 +2,7 @@ package com.xizz.greeting
 
 import com.squareup.anvil.annotations.MergeSubcomponent
 import com.xizz.core.di.UserScope
+import com.xizz.core.di.UserViewModelFactory
 import dagger.BindsInstance
 import dagger.Subcomponent
 

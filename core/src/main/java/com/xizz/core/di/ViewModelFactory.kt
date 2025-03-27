@@ -1,10 +1,8 @@
-package com.xizz.greeting
+package com.xizz.core.di
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.squareup.anvil.annotations.ContributesMultibinding
-import com.xizz.core.di.AppScope
-import com.xizz.core.di.UserScope
 import javax.inject.Inject
 import javax.inject.Provider
 

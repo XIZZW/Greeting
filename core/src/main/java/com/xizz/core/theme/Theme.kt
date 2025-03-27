@@ -1,4 +1,4 @@
-package com.xizz.greeting.ui.theme
+package com.xizz.core.theme
 
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme

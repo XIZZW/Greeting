@@ -23,3 +23,4 @@ rootProject.name = "Greeting"
 include(":app")
 include(":core")
 include(":data:greeting:pub")
+include(":data:greeting:impl")

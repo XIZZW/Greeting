@@ -1,4 +1,4 @@
-package com.xizz.greeting
+package com.xizz.impl
 
 import com.squareup.anvil.annotations.ContributesBinding
 import com.xizz.core.AppScope
